@@ -4,7 +4,7 @@ import './TodoInfo.scss';
 import { UserInfo } from '../UserInfo';
 
 export const TodoInfo = ({ todo }) => (
-  <article className="TodoInfo TodoInfo--completed">
+  <article className={`TodoInfo ${todo ? 'TodoInfo--completed' : null}`}>
     <h2 className="TodoInfo__title">{`${todo.title}`}</h2>
 
     <UserInfo user={todo.user ? todo.user : null} />
